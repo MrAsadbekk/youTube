@@ -1,10 +1,39 @@
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+.navbar:hover ::-webkit-scrollbar-thumb {
+  background-color: #fff;
+}
+
 .navbar {
+  height: 100%;
+  width: 15%;
+
+  &__scroll {
+    overflow: auto;
+  }
+
   &__nav-link {
     text-decoration: none;
     line-height: 20px;
     color: #898989;
     display: flex;
     gap: 13px;
+  }
+
+  &__select {
+    color: #898989;
+  }
+
+  &__box-link {
+    display: block;
+    text-align: left;
+    color: #898989;
+  }
+
+  &__settings-link {
+    color: #898989;
   }
 }
 

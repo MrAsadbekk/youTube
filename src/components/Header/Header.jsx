@@ -12,7 +12,7 @@ import "../Header/Header.scss";
 
 const Header = () => {
   return (
-    <div className="header fixed top-0 left-0 right-8 flex items-center justify-between mt-5 px-8">
+    <div className="header fixed top-0 left-0 right-8 flex items-center justify-between pt-3 px-8">
       <div className="header__box-one flex items-center gap-3">
         <button className="header__menu-btn w-8 h-8 m-0 p-0 bg-transparent cursor-pointer">
           <GiHamburgerMenu className="header__menu-icon w-6 h-6 mr-auto" />
@@ -25,7 +25,7 @@ const Header = () => {
       <form className="header__form flex items-center">
         <input
           type="text"
-          className="header__search w-96 py-3 px-6 flex item-center border-2 rounded-l-3xl outline-0"
+          className="header__search w-96 pt-3 pb-3 px-6 block border-2 rounded-l-3xl outline-0"
           placeholder="Search"
         />
         <button className="header__search-btn border-2 border-l-0 cursor-pointer">
