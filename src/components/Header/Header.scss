@@ -1,0 +1,38 @@
+.header {
+  width: 100%;
+  z-index: 11;
+  flex-direction: row;
+
+  &__menu-btn {
+    border: none;
+  }
+
+  &__logo-icon {
+    color: red;
+  }
+
+  &__search {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #30384c;
+  }
+
+  &__search::placeholder {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #30384c;
+    mix-blend-mode: normal;
+    opacity: 0.4;
+  }
+
+  &__search-btn {
+    height: 48px;
+    width: 50px;
+    border-radius: 0 22px 22px 0;
+    border-left: none;
+  }
+}

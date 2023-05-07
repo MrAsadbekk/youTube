@@ -2,9 +2,6 @@ import React from "react";
 import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 
-import { AiFillYoutube } from "react-icons/ai";
-import { ImYoutube2 } from "react-icons/im";
-import { GiHamburgerMenu } from "react-icons/gi";
 import { BiHome } from "react-icons/bi";
 import { AiOutlineFire } from "react-icons/ai";
 import { MdOutlineSubscriptions } from "react-icons/md";
@@ -20,16 +17,7 @@ import "../Navbar/Navbar.scss";
 
 const Navbar = () => {
   return (
-    <div className="navbar fixed left-8 top-8 flex flex-col items-start">
-      <div className="navbar__box flex items-center gap-8">
-        <button className="navbar__menu-btn w-8 h-8 m-0 p-0 bg-transparent cursor-pointer">
-          <GiHamburgerMenu className="navbar__menu-icon w-8 h-8 ml-auto" />
-        </button>
-        <Link className="navbar__logo flex items-center" to={"/"}>
-          {<AiFillYoutube className="navbar__logo-icon w-9 h-8 ml-auto" />}
-          {<ImYoutube2 className="navbar__logo-icon2 w-20 h-7 text-black" />}
-        </Link>
-      </div>
+    <div className="navbar fixed left-8 top-5 flex flex-col items-start">
       <nav className="navbar__nav">
         <ul className="navbar__list m-0 p-0 mt-16 flex flex-col items-start gap-7 list-none">
           <li className="navbar__item">
@@ -96,6 +84,11 @@ const Navbar = () => {
           </li>
         </ul>
       </nav>
+      <div className="navbar__box mt-8">
+        <select className="outline-0">
+          <option disabled>Show more</option>
+        </select>
+      </div>
     </div>
   );
 };
