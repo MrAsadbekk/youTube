@@ -9,13 +9,15 @@ const Home = () => {
     "https://youtube-v31.p.rapidapi.com/captions?part=snippet&videoId=M7FIvfx5J10"
   );
 
-  console.log(data);
+  console.log(data.items);
+
+  data?.items?.map((element) => {
+    console.log(element);
+  });
 
   return (
     <div className="home mt-9">
-      <div>
-        <h1 className="text-9xl">Hello World</h1>
-      </div>
+      <div></div>
     </div>
   );
 };
