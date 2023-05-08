@@ -18,7 +18,7 @@ import "../Navbar/Navbar.scss";
 
 const Navbar = () => {
   return (
-    <div className="navbar fixed left-8 top-0 pb-8 flex flex-col">
+    <div className="navbar fixed left-8 top-1 pb-8 flex flex-col">
       <div className="navbar__scroll flex flex-col items-start">
         <nav className="navbar__nav">
           <ul className="navbar__list m-0 p-0 mt-16 flex flex-col items-start gap-7 list-none">

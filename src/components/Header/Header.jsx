@@ -1,4 +1,6 @@
 import React from "react";
+import { useState } from "react";
+
 import { Link } from "react-router-dom";
 import { AiFillYoutube } from "react-icons/ai";
 import { ImYoutube2 } from "react-icons/im";
@@ -25,7 +27,7 @@ const Header = () => {
       <form className="header__form flex items-center">
         <input
           type="text"
-          className="header__search w-96 pt-3 pb-3 px-6 block border-2 rounded-l-3xl outline-0"
+          className="header__search w-96 pt-3 pb-3 px-6 block border-2 rounded-l-3xl outline-0 bg-white"
           placeholder="Search"
         />
         <button className="header__search-btn border-2 border-l-0 cursor-pointer">
