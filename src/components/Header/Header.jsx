@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { auth } from "../../firebase";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { AiFillYoutube } from "react-icons/ai";
 import { ImYoutube2 } from "react-icons/im";
@@ -26,8 +26,19 @@ const Header = () => {
 
     return unsubscribe;
   }, []);
+
+  const [display, setDisplay] = useState(false);
+
+  const handleDisplay = () => {
+    setDisplay(!display);
+  };
+
+  const handeLogOut = async () => {
+    await auth.signOut();
+  };
+
   return (
-    <div className="header fixed top-0 left-0 right-8 flex items-center justify-between pt-3 px-8">
+    <div className="header fixed top-0 left-0 right-8 flex items-center justify-between pt-3 pl-8 pr-11">
       <div className="header__box-one flex items-center gap-3">
         <button className="header__menu-btn w-8 h-8 m-0 p-0 bg-transparent cursor-pointer">
           <GiHamburgerMenu className="header__menu-icon w-6 h-6 mr-auto" />
@@ -58,9 +69,25 @@ const Header = () => {
           <button className="w-8 h-8 border-0">
             <IoMdNotificationsOutline className="w-7 h-7" />
           </button>
-          <button className="w-8 h-8 rounded-2xl text-center bg-slate-700 text-white">
-            {user?.multiFactor?.user?.email.slice(0, 1).toUpperCase()}
-          </button>
+          <div className="header__account-box">
+            <button
+              className="header__account-btn w-8 h-8 rounded-2xl text-center bg-slate-700 text-white"
+              onClick={handleDisplay}
+            >
+              {user?.multiFactor?.user?.email.slice(0, 1).toUpperCase()}
+            </button>
+            <div className={display ? "header__logout-box" : "hidden"}>
+              <p className="text-xs text-white bg-transparent">
+                {user?.multiFactor?.user?.email}
+              </p>
+              <button
+                onClick={handeLogOut}
+                className="block mx-auto py-1 px-3 mb-2 border-2 border-white text-white"
+              >
+                Log out
+              </button>
+            </div>
+          </div>
         </div>
         <div className={user ? "hidden" : "block"}>
           <Link

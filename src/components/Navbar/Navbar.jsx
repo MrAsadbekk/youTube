@@ -104,7 +104,7 @@ const Navbar = () => {
             <option className="navbar__option">Show more</option>
           </select>
         </div>
-        <div className="navbar__box-two mt-8">
+        <div className={user ? "navbar__box-two mt-8" : "hidden"}>
           <p className="navbar__box-title m-0 p-0 text-left">Subscriptions</p>
           <ul className="navbar__box-list m-0 p-0 mt-7 list-none flex flex-col gap-7">
             <li className="navbar__box-item">
