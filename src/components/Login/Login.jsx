@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import firebase from "../../firebase.js";
 
@@ -16,7 +17,7 @@ const Login = () => {
     e.preventDefault();
 
     if (!email || !password) {
-      setError("Please enter all information");
+      setError("!Please enter all information");
       return;
     }
 
@@ -24,9 +25,9 @@ const Login = () => {
       await firebase.auth().signInWithEmailAndPassword(email, password);
     } catch (error) {
       if (error.code === "auth/user-not-found") {
-        setError("User does not exist");
+        setError("!User does not exist");
       } else if (error.code === "auth/wrong-password") {
-        setError("There is an error in the password");
+        setError("!There is an error in the password");
       } else {
         setError(error.message);
       }
@@ -47,7 +48,7 @@ const Login = () => {
         <label className="login__label-email w-1/3 flex flex-col items-start">
           Email:
           <input
-            className="login__email w-full border-2 border-black px-3 py-2 outline-0"
+            className="login__email w-full border-2 border-black px-3 py-2 rounded-xl border-teal-400 outline-0"
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -57,7 +58,7 @@ const Login = () => {
           Passwsord:
           <div className="w-full text-start flex justify-between">
             <input
-              className="login__password w-11/12 border-2 border-black px-3 py-2 outline-0"
+              className="login__password w-11/12 border-2 border-black px-3 py-2 rounded-s-xl border-r-0 border-teal-400 outline-0"
               type={showPassword ? "text" : "password"}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
@@ -65,7 +66,7 @@ const Login = () => {
             <button
               type="button"
               onClick={toggleShowPassword}
-              className="login__password-btn text-center px-2 border-2 border-black border-l-0"
+              className="login__password-btn text-center pr-4 border-2 border-teal-400 border-l-0 rounded-e-xl"
             >
               {showPassword ? <AiOutlineEye /> : <AiOutlineEyeInvisible />}
             </button>
@@ -74,11 +75,19 @@ const Login = () => {
 
         <button
           type="submit"
-          className="block mt-4 border-2 border-black px-5 py-2"
+          className="block mt-4 border-2 border-teal-400 rounded-xl px-5 py-2"
         >
           Log in
         </button>
       </form>
+      <div className="login__box-one mt-6">
+        <p>
+          If you are not registered, go to{" "}
+          <Link to={"/register"} className="text-teal-400">
+            Register
+          </Link>
+        </p>
+      </div>
       <div className="mt-6">
         <h2 className="text-red-700 text-5xl">{error}</h2>
       </div>

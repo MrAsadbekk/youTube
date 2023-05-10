@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
+import { auth } from "../../firebase";
 
 import { BiHome } from "react-icons/bi";
 import { AiOutlineFire } from "react-icons/ai";
@@ -17,6 +18,18 @@ import { FiSettings } from "react-icons/fi";
 import "../Navbar/Navbar.scss";
 
 const Navbar = () => {
+  const [user, setUser] = useState(null);
+
+  const unsubscribe = auth.onAuthStateChanged((user) => {
+    if (user) {
+      setUser(user);
+    } else {
+      setUser(null);
+    }
+
+    return unsubscribe;
+  }, []);
+
   return (
     <div className="navbar fixed left-8 top-1 pb-8 flex flex-col">
       <div className="navbar__scroll flex flex-col items-start">

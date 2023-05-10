@@ -17,7 +17,7 @@ const Home = () => {
 
   return (
     <div className="home mt-9">
-      <div></div>
+      <div>Home</div>
     </div>
   );
 };

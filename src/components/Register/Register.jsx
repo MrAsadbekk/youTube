@@ -15,12 +15,12 @@ const Register = () => {
     e.preventDefault();
 
     if (!email || !password || !confirmPassword) {
-      setError("Please enter all information");
+      setError("!Please enter all information");
       return;
     }
 
     if (password !== confirmPassword) {
-      setError("Password not verified");
+      setError("!Password not verified");
       return;
     }
 
@@ -89,7 +89,15 @@ const Register = () => {
           Sign up
         </button>
       </form>
-      <div className="register__box w-full mt-6 text-center">
+      <div className="register__box-one mt-6">
+        <p>
+          <Link to={"/login"} className="text-teal-400">
+            Log in
+          </Link>{" "}
+          if you are registered
+        </p>
+      </div>
+      <div className="register__box-tow w-full mt-6 text-center">
         <h2 className="redister__error text-5xl text-red-700">{error}</h2>
       </div>
     </div>
