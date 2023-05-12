@@ -3,12 +3,12 @@ import { Outlet } from "react-router-dom";
 import Header from "../Header/Header";
 import Navbar from "../Navbar/Navbar";
 
-const Layout = () => {
+const Layout = ({ userProp }) => {
   return (
     <>
-      <Header />
+      <Header user={userProp} />
       <Outlet />
-      <Navbar />
+      <Navbar user={userProp} />
     </>
   );
 };

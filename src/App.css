@@ -9,6 +9,11 @@
   background-color: #f2f2f2;
 }
 
+.black {
+  background-color: #000;
+  color: #fff;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;

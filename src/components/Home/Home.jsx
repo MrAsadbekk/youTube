@@ -1,24 +1,28 @@
 import React from "react";
-import { useState, useEffect } from "react";
-import useFetch from "../../custom/useFetch";
+import { useState, useEffect, useContext } from "react";
+// import useFetch from "../../custom/useFetch";
+import { MyContext } from "../Context/Context";
 
+import Card from "../Card/Card";
 import "../Home/Home.scss";
 
 const Home = () => {
-  const { data, loading, error } = useFetch(
-    "https://youtube-v31.p.rapidapi.com/captions?part=snippet&videoId=M7FIvfx5J10"
-  );
-
-  // console.log(data.items);
-
-  // data?.items?.map((element) => {
-  //   console.log(element);
-  // });
+  const { color } = useContext(MyContext);
 
   return (
-    <div className="home mt-9">
-      <div>Home</div>
-    </div>
+    <>
+      <div
+        className={
+          !color
+            ? "home fixed right-0 top-16 pr-12 flex flex-col"
+            : "home w-11/12 fixed right-0 top-16 pr-12 flex flex-col"
+        }
+      >
+        <div className="home__box mb-12">
+          <Card />
+        </div>
+      </div>
+    </>
   );
 };
 

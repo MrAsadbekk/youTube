@@ -1,0 +1,16 @@
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+.home:hover ::-webkit-scrollbar-thumb {
+  background-color: #fff;
+}
+
+.home {
+  width: 80%;
+  height: 100%;
+
+  &__box {
+    overflow: auto;
+  }
+}

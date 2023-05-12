@@ -40,7 +40,7 @@ const Login = () => {
 
   return (
     <div className="login">
-      <h2 className="login__title mb-6 text-6xl">Login</h2>
+      <h2 className="login__title mb-6 text-6xl text-center">Login</h2>
       <form
         onSubmit={handleLogin}
         className="login__form flex flex-col items-center gap-4"
@@ -56,7 +56,7 @@ const Login = () => {
         </label>
         <label className="login__label-password w-1/3 flex flex-col items-start">
           Passwsord:
-          <div className="w-full text-start flex justify-between">
+          <div className="w-full text-start flex">
             <input
               className="login__password w-11/12 border-2 border-black px-3 py-2 rounded-s-xl border-r-0 border-teal-400 outline-0"
               type={showPassword ? "text" : "password"}
@@ -81,7 +81,7 @@ const Login = () => {
         </button>
       </form>
       <div className="login__box-one mt-6">
-        <p>
+        <p className="text-center">
           If you are not registered, go to{" "}
           <Link to={"/register"} className="text-teal-400">
             Register
