@@ -8,7 +8,7 @@ const useFetch = (url) => {
   const options = {
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "c74c9a418emsh73adeb7546ea851p1c6f98jsnfb02d600a92d",
+      "X-RapidAPI-Key": "435798976emsh9e95c78a06208acp1cf4c6jsnd985c63cbc24",
       "X-RapidAPI-Host": "youtube-v31.p.rapidapi.com",
     },
   };

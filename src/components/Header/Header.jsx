@@ -73,14 +73,18 @@ const Header = ({ user }) => {
             {/* <BsFillSunFill /> */}
           </button>
         </div>
-        <div className={user ? "flex items-center gap-8" : "hidden"}>
-          <button className="w-8 h-8 border-0">
+        <div
+          className={
+            user ? "header__button-box flex items-center gap-8" : "hidden"
+          }
+        >
+          <button className="header__button w-8 h-8 border-0">
             <AiOutlineVideoCamera className="w-7 h-7" />
           </button>
-          <button className="w-8 h-8 border-0">
+          <button className="header__button w-8 h-8 border-0">
             <CgMenuGridO className="w-7 h-7" />
           </button>
-          <button className="w-8 h-8 border-0">
+          <button className="header__button w-8 h-8 border-0">
             <IoMdNotificationsOutline className="w-7 h-7" />
           </button>
           <div className="header__account-box">

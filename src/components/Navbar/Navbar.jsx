@@ -32,64 +32,64 @@ const Navbar = ({ user }) => {
             <ul className="navbar__list m-0 p-0 mt-16 flex flex-col items-start gap-7 list-none">
               <li className="navbar__item">
                 <NavLink className="navbar__nav-link" to={"/"}>
-                  <BiHome className="navbar__link-home w-5 h-5" />
-                  Home
+                  <BiHome className="navbar__link-home navbar__link-icon w-5 h-5" />
+                  <span className="navbar__link-span">Home</span>
                 </NavLink>
               </li>
               <li className="navbar__item">
                 <NavLink className="navbar__nav-link" to={"/trending"}>
-                  <AiOutlineFire className="navbar__link-trending w-5 h-5" />
-                  Trending
+                  <AiOutlineFire className="navbar__link-trending navbar__link-icon w-5 h-5" />
+                  <span className="navbar__link-span">Trending</span>
                 </NavLink>
               </li>
               <li className="navbar__item">
                 <NavLink className="navbar__nav-link" to={"/subscriptions"}>
-                  <MdOutlineSubscriptions className="navbar__link-subscriptions w-5 h-5" />
-                  Subscriptions
+                  <MdOutlineSubscriptions className="navbar__link-subscriptions navbar__link-icon w-5 h-5" />
+                  <span className="navbar__link-span">Subscriptions</span>
                 </NavLink>
               </li>
             </ul>
             <ul className="navbar__list-two m-0 p-0 mt-16 flex flex-col items-start gap-7 list-none">
               <li className="navbar__item-two">
                 <NavLink to={"/library"} className="navbar__nav-link">
-                  <AiOutlineFolder className="navbar__link-library w-5 h-5" />
-                  Library
+                  <AiOutlineFolder className="navbar__link-library navbar__link-icon w-5 h-5" />
+                  <span className="navbar__link-span">Library</span>
                 </NavLink>
               </li>
               <li className="navbar__item-two">
                 <NavLink to={"/history"} className="navbar__nav-link">
-                  <RiFilePaper2Line className="navbar__link-history w-5 h-5 rotate-180" />
-                  History
+                  <RiFilePaper2Line className="navbar__link-history navbar__link-icon w-5 h-5 rotate-180" />
+                  <span className="navbar__link-span">History</span>
                 </NavLink>
               </li>
               <li className="navbar__item-two">
                 <NavLink to={"/watchlater"} className="navbar__nav-link">
-                  <TfiAlarmClock className="navbar__link-watch w-5 h-5" />
-                  Watch later
+                  <TfiAlarmClock className="navbar__link-watch navbar__link-icon w-5 h-5" />
+                  <span className="navbar__link-span">Watch later</span>
                 </NavLink>
               </li>
               <li className="navbar__item-two">
                 <NavLink to={"/favourites"} className="navbar__nav-link">
-                  <AiOutlineStar className="navbar__link-star w-5 h-5" />
-                  Favourites
+                  <AiOutlineStar className="navbar__link-star navbar__link-icon w-5 h-5" />
+                  <span className="navbar__link-span">Favourites</span>
                 </NavLink>
               </li>
               <li className="navbar__item-two">
                 <NavLink to={"/liked"} className="navbar__nav-link">
-                  <AiOutlineHeart className="navbar__link-like w-5 h-5" />
-                  Liked videos
+                  <AiOutlineHeart className="navbar__link-like navbar__link-icon w-5 h-5" />
+                  <span className="navbar__link-span">Liked videos</span>
                 </NavLink>
               </li>
               <li className="navbar__item-two">
                 <NavLink to={"/music"} className="navbar__nav-link">
-                  <BsMusicNoteBeamed className="navbar__link-music w-5 h-5" />
-                  Music
+                  <BsMusicNoteBeamed className="navbar__link-music navbar__link-icon w-5 h-5" />
+                  <span className="navbar__link-span">Music</span>
                 </NavLink>
               </li>
               <li className="navbar__item-two">
                 <NavLink to={"/games"} className="navbar__nav-link">
-                  <BiJoystick className="navbar__link-games w-5 h-5" />
-                  Games
+                  <BiJoystick className="navbar__link-games navbar__link-icon w-5 h-5" />
+                  <span className="navbar__link-span">Games</span>
                 </NavLink>
               </li>
             </ul>
@@ -139,8 +139,8 @@ const Navbar = ({ user }) => {
               href="#"
               className="navbar__settings-link flex items-center gap-3"
             >
-              <FiSettings className="w-5 h-5" />
-              Setting
+              <FiSettings className="navbar__link-icon w-5 h-5" />
+              <span className="navbar__link-span">Setting</span>
             </a>
           </div>
         </div>

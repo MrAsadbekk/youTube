@@ -36,7 +36,11 @@ const CardVideo = () => {
         </div>
         <div className="video__card flex flex-col gap-3">
           {data?.items?.map((element) => (
-            <Link to={`news/${element.id.videoId}`} key={element.id.videoId}>
+            <Link
+              className="video__link"
+              to={`news/${element.id.videoId}`}
+              key={element.id.videoId}
+            >
               <div className="video__minicard flex gap-2">
                 <img
                   className="video__img"

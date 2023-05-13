@@ -18,7 +18,11 @@ const Card = () => {
   return (
     <div className="card">
       {data?.items?.map((element) => (
-        <Link to={`news/${element.id.videoId}`} key={element.id.videoId}>
+        <Link
+          className="card__link"
+          to={`news/${element.id.videoId}`}
+          key={element.id.videoId}
+        >
           <div className="card__box block">
             <img
               className="card__img"

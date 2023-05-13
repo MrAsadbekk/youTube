@@ -49,3 +49,10 @@
 .read-the-docs {
   color: #888;
 }
+
+@media only screen and (max-width: 800px) {
+  #root {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
